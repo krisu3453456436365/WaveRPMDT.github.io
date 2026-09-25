@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T17:44:12.530063Z",
+  "generated_at": "2026-09-25T17:45:13.954123Z",
   "records": [
     {
       "name": "Chris Davis",
@@ -85,17 +85,30 @@
       "ssn": "4806",
       "dob": "25.09.2026",
       "address": "USA / Los Angeles",
-      "status": "clear",
-      "is_wanted": false,
+      "status": "warrant",
+      "is_wanted": true,
       "has_id_card": true,
-      "note": "Dowód osobisty zarejestrowany.",
+      "note": "Wyrok: 111 - test (test)",
       "vehicles": [],
-      "penalties": [],
+      "penalties": [
+        {
+          "type": "sentence",
+          "amount": 111,
+          "reason": "test",
+          "duration": "test",
+          "recipient_name": "test",
+          "issuer": "test",
+          "issuer_id": "1095768535583695018",
+          "timestamp": "2026-09-25T17:44:59.728891+00:00",
+          "channel_id": 1550192091261313174,
+          "revoke_license": false
+        }
+      ],
       "raw_data": {
         "id_card": true,
-        "warrant": false,
+        "warrant": true,
         "vehicle_count": 0,
-        "penalty_count": 0
+        "penalty_count": 1
       }
     },
     {
