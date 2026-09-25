@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T17:34:44.748972Z",
+  "generated_at": "2026-09-25T17:35:25.883925Z",
   "records": [
     {
       "name": "Chris Davis",
@@ -9,9 +9,9 @@
       "status": "warrant",
       "is_wanted": true,
       "has_id_card": true,
-      "note": "Wyrok: 100 - 111 (11) | Mandat: 11 - 1 (1) | Pojazdy: aDADAD (QWDADS)",
+      "note": "Wyrok: 100 - 111 (11) | Mandat: 11 - 1 (1) | Pojazdy: aDADAD | QWDADS | VIN 3",
       "vehicles": [
-        "aDADAD (QWDADS)"
+        "aDADAD | QWDADS | VIN 3"
       ],
       "penalties": [
         {
