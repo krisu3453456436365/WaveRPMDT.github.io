@@ -161,7 +161,7 @@
 <div id="scan"></div>
 <div id="boot-screen"><div class="boot-text" id="boot-text">INICJALIZACJA MDT<span class="cursor">_</span></div></div>
 <div id="login-screen"><div class="login-box"><div class="badge-mark">LOS ANGELES SHERIFF'S DEPARTMENT</div><h1>Mobile Data Terminal</h1><div class="login-sub">Autoryzacja wymagana przed uzyskaniem dostępu</div><div class="field"><label for="badge-num">NUMER ODZNAKI</label><input id="badge-num" type="text" autocomplete="off" placeholder="np. 4471"></div><div class="field"><label for="badge-pass">HASŁO TERMINALA</label><input id="badge-pass" type="password" autocomplete="off" placeholder="••••••••"></div><div id="login-error"></div><button class="login-btn" onclick="tryLogin()">ZALOGUJ SIĘ</button><div class="login-foot">Dostęp wyłącznie dla funkcjonariuszy LASD z aktywną odznaką.<br>Każde logowanie jest rejestrowane w systemie.</div></div></div>
-<div id="app"><header><div class="left"><span class="mark">LASD MDT</span><span class="sep">|</span><span class="unit" id="unit-label">Jednostka: —</span></div><div class="right"><span id="clock">--:--:--</span><button id="logout-btn" onclick="doLogout()">WYLOGUJ</button></div></header><main><div class="tabs"><div class="tab active" data-tab="person">WYSZUKIWANIE OSÓB</div><div class="tab" data-tab="vehicle">POJAZDY</div><div class="tab" data-tab="warrants">NAKAZY</div></div><div id="tab-person" class="panel"><div class="search-row"><div class="field"><label>SSN (numer ubezpieczenia)</label><input id="q-ssn" type="text" placeholder="np. 123-45-6789"></div><div class="field"><label>IMIĘ I NAZWISKO</label><input id="q-name" type="text" placeholder="np. John Doe"></div><button class="search-btn" onclick="runSearch()">SZUKAJ</button></div><div class="hint">Wpisz SSN, imię i nazwisko, lub oba naraz — im więcej danych, tym dokładniejszy wynik.</div><div id="results"></div></div><div id="tab-vehicle" class="panel" style="display:none;"><div class="stub">Moduł wyszukiwania pojazdów — w przygotowaniu.</div></div><div id="tab-warrants" class="panel" style="display:none;"><div class="stub">Rejestr nakazów — w przygotowaniu.</div></div></main></div>
+<div id="app"><header><div class="left"><span class="mark">LASD MDT</span><span class="sep">|</span><span class="unit" id="unit-label">Jednostka: —</span></div><div class="right"><span id="clock">--:--:--</span><button id="logout-btn" onclick="doLogout()">WYLOGUJ</button></div></header><main><div class="tabs"><div class="tab active" data-tab="person">WYSZUKIWANIE OSÓB</div><div class="tab" data-tab="vehicle">POJAZDY</div><div class="tab" data-tab="warrants">NAKAZY</div></div><div id="tab-person" class="panel"><div class="search-row"><div class="field"><label>SSN (numer ubezpieczenia)</label><input id="q-ssn" type="text" placeholder="np. 123-45-6789"></div><div class="field"><label>IMIĘ I NAZWISKO</label><input id="q-name" type="text" placeholder="np. John Doe"></div><button class="search-btn" onclick="runSearch()">SZUKAJ</button></div><div class="hint">Wpisz SSN, imię i nazwisko, lub oba naraz — im więcej danych, tym dokładniejszy wynik.</div><div id="results"></div></div><div id="tab-vehicle" class="panel" style="display:none;"><div class="search-row" style="margin-bottom:12px;"><div class="field" style="flex:1;"><label>FILTR POJAZDU</label><input id="q-vehicle" type="text" placeholder="np. ABC 12345 lub model"></div><button class="search-btn" onclick="renderVehicleTab()">POKAŻ POJAZDY</button></div><div id="vehicle-results" class="stub">Ładowanie pojazdów…</div></div><div id="tab-warrants" class="panel" style="display:none;"><div class="stub">Rejestr nakazów — w przygotowaniu.</div></div></main></div>
 <script>
   window.addEventListener('load', ()=>{
     setTimeout(()=>{
@@ -264,6 +264,56 @@
     throw lastError || new Error('No data URL worked');
   }
 
+  function renderVehicleList(records, vehicleFilter = '') {
+    const box = document.getElementById('vehicle-results');
+    const q = vehicleFilter.trim().toLowerCase();
+
+    const vehicles = records.flatMap((person) => {
+      const personName = person.name || 'Nieznane';
+      const personSsn = person.ssn || 'Brak';
+      const list = Array.isArray(person.vehicles) ? person.vehicles : [];
+      return list.map((vehicle) => ({
+        label: String(vehicle),
+        owner: personName,
+        ssn: personSsn,
+        status: person.status || 'clear'
+      }));
+    }).filter((item) => {
+      if (!q) return true;
+      return item.label.toLowerCase().includes(q) || item.owner.toLowerCase().includes(q) || item.ssn.toLowerCase().includes(q);
+    });
+
+    if (!vehicles.length) {
+      box.innerHTML = '<div class="empty">Brak zarejestrowanych pojazdów lub brak danych do wyświetlenia.</div>';
+      return;
+    }
+
+    box.innerHTML = vehicles.map((v) => `
+      <div class="record-wrap">
+        <div class="record">
+          <div>
+            <div class="name">${v.label}</div>
+            <div class="meta">Właściciel: ${v.owner}<br>SSN: ${v.ssn}</div>
+          </div>
+          <div class="status ${v.status === 'warrant' ? 'warrant' : 'clear'}">${v.status === 'warrant' ? 'NAKAZ' : 'OK'}</div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  async function renderVehicleTab() {
+    const box = document.getElementById('vehicle-results');
+    box.innerHTML = '<div class="empty">Szukam pojazdów…</div>';
+
+    try {
+      const records = await fetchMdtRecords('', '');
+      const q = document.getElementById('q-vehicle').value;
+      renderVehicleList(records, q);
+    } catch (e) {
+      box.innerHTML = '<div class="empty">Nie można pobrać listy pojazdów z danych MDT.</div>';
+    }
+  }
+
   async function runSearch(){
     const ssnQ = document.getElementById('q-ssn').value.trim();
     const nameQ = document.getElementById('q-name').value.trim();
@@ -284,12 +334,8 @@
       }
 
       box.innerHTML = hits.map((p, i) => {
-        const vehicles = Array.isArray(p.vehicles) ? p.vehicles.join(', ') : '';
-        const penalties = Array.isArray(p.penalties) ? p.penalties.join(' | ') : '';
-        const extra = [];
-        if (vehicles) extra.push('Pojazdy: ' + vehicles);
-        if (penalties) extra.push('Kary: ' + penalties);
-        const detail = extra.length ? '<div class="meta" style="margin-top:6px;">' + extra.join('<br>') + '</div>' : '';
+        const vehicles = Array.isArray(p.vehicles) && p.vehicles.length ? p.vehicles.map(v => `• ${v}`).join('<br>') : 'Brak';
+        const penalties = Array.isArray(p.penalties) && p.penalties.length ? p.penalties.map(v => `• ${v}`).join('<br>') : 'Brak';
         return `
           <div class="record-wrap" style="animation-delay:${i * 0.08}s">
             <div class="record">
@@ -299,8 +345,9 @@
               </div>
               <div class="status ${p.status === 'warrant' ? 'warrant' : 'clear'}">${p.status === 'warrant' ? 'NAKAZ AKTYWNY' : 'CZYSTY'}</div>
             </div>
-            <div class="meta" style="margin:-4px 0 4px 2px;">${p.note || 'Brak danych'}</div>
-            ${detail}
+            <div class="meta" style="margin:-4px 0 8px 2px;">${p.note || 'Brak danych'}</div>
+            <div class="meta" style="margin:0 0 8px 2px;">Pojazdy:<br>${vehicles}</div>
+            <div class="meta" style="margin:0 0 4px 2px;">Mandaty / wyroki:<br>${penalties}</div>
           </div>
         `;
       }).join('');
@@ -313,6 +360,8 @@
   document.getElementById('badge-pass').addEventListener('keydown', e=>{ if(e.key === 'Enter') tryLogin(); });
   document.getElementById('q-name').addEventListener('keydown', e=>{ if(e.key === 'Enter') runSearch(); });
   document.getElementById('q-ssn').addEventListener('keydown', e=>{ if(e.key === 'Enter') runSearch(); });
+  document.getElementById('q-vehicle').addEventListener('keydown', e=>{ if(e.key === 'Enter') renderVehicleTab(); });
+  renderVehicleTab();
 </script>
 </body>
 </html>
