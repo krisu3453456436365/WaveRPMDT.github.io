@@ -67,7 +67,6 @@
     0%{ opacity:0; transform:translateY(14px); }
     100%{ opacity:1; transform:translateY(0); }
   }
-  /* ---------- LOGIN ---------- */
   #login-screen{
     position:fixed; inset:0;
     display:flex; align-items:center; justify-content:center;
@@ -102,214 +101,68 @@
     background-size: 200% 100%;
     animation: sweep 3.5s linear infinite;
   }
-  .badge-mark{
-    font-size:11px; letter-spacing:2px; color:var(--amber);
-    margin-bottom:4px;
-  }
-  .login-box h1{
-    font-size:20px; margin:0 0 2px 0; color:var(--text); font-weight:600;
-  }
+  .badge-mark{ font-size:11px; letter-spacing:2px; color:var(--amber); margin-bottom:4px; }
+  .login-box h1{ font-size:20px; margin:0 0 2px 0; color:var(--text); font-weight:600; }
   .login-sub{ font-size:12px; color:var(--text-dim); margin-bottom:24px; }
   .field{ margin-bottom:14px; }
   .field label{ display:block; font-size:11px; color:var(--text-dim); margin-bottom:5px; }
-  .field input{
-    width:100%; background:#080a08; border:1px solid var(--line);
-    color:var(--text); padding:10px 11px; font-family:inherit; font-size:14px;
-    outline:none;
-    transition: border-color 0.25s ease, background 0.25s ease;
-  }
+  .field input{ width:100%; background:#080a08; border:1px solid var(--line); color:var(--text); padding:10px 11px; font-family:inherit; font-size:14px; outline:none; transition: border-color 0.25s ease, background 0.25s ease; }
   .field input:focus{ border-color:var(--amber-dim); background:#0c0f0b; }
-  #login-error{
-    font-size:12px; color:var(--danger); min-height:16px; margin-bottom:8px;
-  }
-  .login-btn{
-    width:100%; background:var(--amber); color:#1a1406; border:none;
-    padding:11px; font-family:inherit; font-size:13px; font-weight:600;
-    letter-spacing:0.5px; cursor:pointer; margin-top:6px;
-    transition: background 0.2s ease, transform 0.1s ease;
-  }
+  #login-error{ font-size:12px; color:var(--danger); min-height:16px; margin-bottom:8px; }
+  .login-btn{ width:100%; background:var(--amber); color:#1a1406; border:none; padding:11px; font-family:inherit; font-size:13px; font-weight:600; letter-spacing:0.5px; cursor:pointer; margin-top:6px; transition: background 0.2s ease, transform 0.1s ease; }
   .login-btn:hover{ background:#e8b755; }
   .login-btn:active{ transform:scale(0.98); }
-  @keyframes shake{
-    0%,100%{ transform:translateX(0); }
-    20%{ transform:translateX(-6px); }
-    40%{ transform:translateX(5px); }
-    60%{ transform:translateX(-4px); }
-    80%{ transform:translateX(3px); }
-  }
+  @keyframes shake{ 0%,100%{ transform:translateX(0); } 20%{ transform:translateX(-6px); } 40%{ transform:translateX(5px); } 60%{ transform:translateX(-4px); } 80%{ transform:translateX(3px); } }
   .login-box.shake{ animation: shake 0.4s ease; }
   .login-foot{ font-size:10px; color:var(--text-dim); margin-top:18px; line-height:1.6; }
-
-  /* ---------- APP ---------- */
   #app{ display:none; min-height:100%; }
   #app.show{ animation: fadeUp 0.45s ease-out; }
-  header{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:12px 20px; border-bottom:1px solid var(--line);
-    background:var(--panel);
-    flex-wrap:wrap; gap:10px;
-  }
+  header{ display:flex; align-items:center; justify-content:space-between; padding:12px 20px; border-bottom:1px solid var(--line); background:var(--panel); flex-wrap:wrap; gap:10px; }
   #clock .colon{ animation: typeCursor 1s steps(1) infinite; }
   header .left{ display:flex; align-items:center; gap:12px; }
   header .mark{ color:var(--amber); font-weight:600; font-size:14px; letter-spacing:1px; }
   header .sep{ color:var(--line); }
   header .unit{ font-size:12px; color:var(--text-dim); }
   header .right{ display:flex; align-items:center; gap:16px; font-size:12px; color:var(--text-dim); }
-  #logout-btn{
-    background:none; border:1px solid var(--line); color:var(--text-dim);
-    font-family:inherit; font-size:11px; padding:6px 10px; cursor:pointer;
-    transition: border-color 0.2s ease, color 0.2s ease;
-  }
+  #logout-btn{ background:none; border:1px solid var(--line); color:var(--text-dim); font-family:inherit; font-size:11px; padding:6px 10px; cursor:pointer; transition: border-color 0.2s ease, color 0.2s ease; }
   #logout-btn:hover{ border-color:var(--danger); color:var(--danger); }
-
   main{ padding:20px; max-width:920px; margin:0 auto; }
-
   .tabs{ display:flex; gap:2px; margin-bottom:18px; border-bottom:1px solid var(--line); }
-  .tab{
-    padding:9px 16px; font-size:12px; color:var(--text-dim); cursor:pointer;
-    border-bottom:2px solid transparent; user-select:none;
-    transition: color 0.2s ease, border-color 0.2s ease;
-  }
+  .tab{ padding:9px 16px; font-size:12px; color:var(--text-dim); cursor:pointer; border-bottom:2px solid transparent; user-select:none; transition: color 0.2s ease, border-color 0.2s ease; }
   .tab:hover{ color:var(--text); }
   .tab.active{ color:var(--amber); border-bottom-color:var(--amber); }
-
-  .panel{
-    border:1px solid var(--line); background:var(--panel); padding:20px;
-    animation: fadeUp 0.3s ease-out;
-  }
+  .panel{ border:1px solid var(--line); background:var(--panel); padding:20px; animation: fadeUp 0.3s ease-out; }
   .search-row{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:4px; }
   .search-row .field{ flex:1; min-width:180px; margin-bottom:0; }
   .search-row .field label{ font-size:10px; color:var(--text-dim); margin-bottom:5px; }
-  .search-row input{
-    width:100%; background:#080a08; border:1px solid var(--line);
-    color:var(--text); padding:9px 10px; font-family:inherit; font-size:13px; outline:none;
-  }
+  .search-row input{ width:100%; background:#080a08; border:1px solid var(--line); color:var(--text); padding:9px 10px; font-family:inherit; font-size:13px; outline:none; }
   .search-row input:focus{ border-color:var(--amber-dim); }
-  .search-btn{
-    align-self:flex-end;
-    background:var(--amber); color:#1a1406; border:none;
-    padding:9px 18px; font-family:inherit; font-size:12px; font-weight:600; cursor:pointer;
-    height:38px; margin-top:auto;
-    transition: background 0.2s ease, transform 0.1s ease;
-  }
+  .search-btn{ align-self:flex-end; background:var(--amber); color:#1a1406; border:none; padding:9px 18px; font-family:inherit; font-size:12px; font-weight:600; cursor:pointer; height:38px; margin-top:auto; transition: background 0.2s ease, transform 0.1s ease; }
   .search-btn:hover{ background:#e8b755; }
   .search-btn:active{ transform:scale(0.97); }
   .hint{ font-size:10px; color:var(--text-dim); margin-top:8px; }
-
   #results{ margin-top:18px; }
-  @keyframes recordIn{
-    0%{ opacity:0; transform:translateY(8px); }
-    100%{ opacity:1; transform:translateY(0); }
-  }
-  .record-wrap{
-    opacity:0;
-    animation: recordIn 0.35s ease-out forwards;
-  }
-  .record{
-    border:1px solid var(--line); padding:14px 16px; margin-bottom:2px;
-    display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
-    transition: border-color 0.2s ease;
-  }
+  @keyframes recordIn{ 0%{ opacity:0; transform:translateY(8px); } 100%{ opacity:1; transform:translateY(0); } }
+  .record-wrap{ opacity:0; animation: recordIn 0.35s ease-out forwards; }
+  .record{ border:1px solid var(--line); padding:14px 16px; margin-bottom:2px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; transition: border-color 0.2s ease; }
   .record:hover{ border-color:var(--amber-dim); }
   .record .name{ font-size:14px; color:var(--text); font-weight:600; }
   .record .meta{ font-size:11px; color:var(--text-dim); margin-top:4px; line-height:1.7; }
-  @keyframes pulseWarn{
-    0%,100%{ box-shadow:0 0 0 0 rgba(176,69,63,0); }
-    50%{ box-shadow:0 0 0 3px rgba(176,69,63,0.12); }
-  }
-  .status{
-    font-size:11px; padding:3px 9px; height:fit-content;
-    border:1px solid; white-space:nowrap;
-  }
+  @keyframes pulseWarn{ 0%,100%{ box-shadow:0 0 0 0 rgba(176,69,63,0); } 50%{ box-shadow:0 0 0 3px rgba(176,69,63,0.12); } }
+  .status{ font-size:11px; padding:3px 9px; height:fit-content; border:1px solid; white-space:nowrap; }
   .status.clear{ color:var(--green); border-color:var(--green); }
   .status.warrant{ color:var(--danger); border-color:var(--danger); animation: pulseWarn 1.8s ease-in-out infinite; }
   @keyframes emptyFade{ 0%{opacity:0;} 100%{opacity:1;} }
   .empty{ font-size:12px; color:var(--text-dim); padding:20px 0; text-align:center; animation: emptyFade 0.3s ease-out; }
-
   .stub{ font-size:12px; color:var(--text-dim); padding:30px 0; text-align:center; }
 </style>
 </head>
 <body>
-
 <div id="scan"></div>
-
-<div id="boot-screen">
-  <div class="boot-text" id="boot-text">INICJALIZACJA MDT<span class="cursor">_</span></div>
-</div>
-
-<div id="login-screen">
-  <div class="login-box">
-    <div class="badge-mark">LOS ANGELES SHERIFF'S DEPARTMENT</div>
-    <h1>Mobile Data Terminal</h1>
-    <div class="login-sub">Autoryzacja wymagana przed uzyskaniem dostępu</div>
-
-    <div class="field">
-      <label for="badge-num">NUMER ODZNAKI</label>
-      <input id="badge-num" type="text" autocomplete="off" placeholder="np. 4471">
-    </div>
-    <div class="field">
-      <label for="badge-pass">HASŁO TERMINALA</label>
-      <input id="badge-pass" type="password" autocomplete="off" placeholder="••••••••">
-    </div>
-    <div id="login-error"></div>
-    <button class="login-btn" onclick="tryLogin()">ZALOGUJ SIĘ</button>
-    <div class="login-foot">
-      Dostęp wyłącznie dla funkcjonariuszy LASD z aktywną odznaką.<br>
-      Każde logowanie jest rejestrowane w systemie.
-    </div>
-  </div>
-</div>
-
-<div id="app">
-  <header>
-    <div class="left">
-      <span class="mark">LASD MDT</span>
-      <span class="sep">|</span>
-      <span class="unit" id="unit-label">Jednostka: —</span>
-    </div>
-    <div class="right">
-      <span id="clock">--:--:--</span>
-      <button id="logout-btn" onclick="doLogout()">WYLOGUJ</button>
-    </div>
-  </header>
-
-  <main>
-    <div class="tabs">
-      <div class="tab active" data-tab="person">WYSZUKIWANIE OSÓB</div>
-      <div class="tab" data-tab="vehicle">POJAZDY</div>
-      <div class="tab" data-tab="warrants">NAKAZY</div>
-    </div>
-
-    <div id="tab-person" class="panel">
-      <div class="search-row">
-        <div class="field">
-          <label>SSN (numer ubezpieczenia)</label>
-          <input id="q-ssn" type="text" placeholder="np. 123-45-6789">
-        </div>
-        <div class="field">
-          <label>IMIĘ I NAZWISKO</label>
-          <input id="q-name" type="text" placeholder="np. John Doe">
-        </div>
-        <button class="search-btn" onclick="runSearch()">SZUKAJ</button>
-      </div>
-      <div class="hint">Wpisz SSN, imię i nazwisko, lub oba naraz — im więcej danych, tym dokładniejszy wynik.</div>
-      <div id="results"></div>
-    </div>
-
-    <div id="tab-vehicle" class="panel" style="display:none;">
-      <div class="stub">Moduł wyszukiwania pojazdów — w przygotowaniu.</div>
-    </div>
-    <div id="tab-warrants" class="panel" style="display:none;">
-      <div class="stub">Rejestr nakazów — w przygotowaniu.</div>
-    </div>
-  </main>
-</div>
-
+<div id="boot-screen"><div class="boot-text" id="boot-text">INICJALIZACJA MDT<span class="cursor">_</span></div></div>
+<div id="login-screen"><div class="login-box"><div class="badge-mark">LOS ANGELES SHERIFF'S DEPARTMENT</div><h1>Mobile Data Terminal</h1><div class="login-sub">Autoryzacja wymagana przed uzyskaniem dostępu</div><div class="field"><label for="badge-num">NUMER ODZNAKI</label><input id="badge-num" type="text" autocomplete="off" placeholder="np. 4471"></div><div class="field"><label for="badge-pass">HASŁO TERMINALA</label><input id="badge-pass" type="password" autocomplete="off" placeholder="••••••••"></div><div id="login-error"></div><button class="login-btn" onclick="tryLogin()">ZALOGUJ SIĘ</button><div class="login-foot">Dostęp wyłącznie dla funkcjonariuszy LASD z aktywną odznaką.<br>Każde logowanie jest rejestrowane w systemie.</div></div></div>
+<div id="app"><header><div class="left"><span class="mark">LASD MDT</span><span class="sep">|</span><span class="unit" id="unit-label">Jednostka: —</span></div><div class="right"><span id="clock">--:--:--</span><button id="logout-btn" onclick="doLogout()">WYLOGUJ</button></div></header><main><div class="tabs"><div class="tab active" data-tab="person">WYSZUKIWANIE OSÓB</div><div class="tab" data-tab="vehicle">POJAZDY</div><div class="tab" data-tab="warrants">NAKAZY</div></div><div id="tab-person" class="panel"><div class="search-row"><div class="field"><label>SSN (numer ubezpieczenia)</label><input id="q-ssn" type="text" placeholder="np. 123-45-6789"></div><div class="field"><label>IMIĘ I NAZWISKO</label><input id="q-name" type="text" placeholder="np. John Doe"></div><button class="search-btn" onclick="runSearch()">SZUKAJ</button></div><div class="hint">Wpisz SSN, imię i nazwisko, lub oba naraz — im więcej danych, tym dokładniejszy wynik.</div><div id="results"></div></div><div id="tab-vehicle" class="panel" style="display:none;"><div class="stub">Moduł wyszukiwania pojazdów — w przygotowaniu.</div></div><div id="tab-warrants" class="panel" style="display:none;"><div class="stub">Rejestr nakazów — w przygotowaniu.</div></div></main></div>
 <script>
-  // Dane pochodzą teraz na żywo z API bota (patrz zmienna API_BASE poniżej) —
-  // usunięto wcześniejszą przykładową bazę wpisaną na sztywno w kodzie.
-
-  // ---- boot sequence (one orchestrated moment on page load) ----
   window.addEventListener('load', ()=>{
     setTimeout(()=>{
       const boot = document.getElementById('boot-screen');
@@ -326,18 +179,18 @@
     const err = document.getElementById('login-error');
     const box = document.querySelector('.login-box');
     if(!badge || !pass){
-      err.textContent = "Podaj numer odznaki i hasło.";
+      err.textContent = 'Podaj numer odznaki i hasło.';
       box.classList.remove('shake');
       void box.offsetWidth;
       box.classList.add('shake');
       return;
     }
-    err.textContent = "";
+    err.textContent = '';
     document.getElementById('login-screen').style.display = 'none';
     const app = document.getElementById('app');
     app.style.display = 'block';
     app.classList.add('show');
-    document.getElementById('unit-label').textContent = "Odznaka: " + badge;
+    document.getElementById('unit-label').textContent = 'Odznaka: ' + badge;
     startClock();
   }
 
@@ -361,26 +214,39 @@
       const now = new Date();
       const t = now.toLocaleTimeString('pl-PL');
       const parts = t.split(':');
-      document.getElementById('clock').innerHTML =
-        parts[0] + '<span class="colon">:</span>' + parts[1] + '<span class="colon">:</span>' + parts[2];
+      document.getElementById('clock').innerHTML = parts[0] + '<span class="colon">:</span>' + parts[1] + '<span class="colon">:</span>' + parts[2];
     }
     tick();
     setInterval(tick, 1000);
   }
 
-  // Po stronie lokalnej / hostowanej na tej samej domenie backend jest dostępny pod api.php.
-  const API_BASE = window.location.origin && window.location.origin !== 'null' ? window.location.origin : '';
+  const DATA_URL = 'https://raw.githubusercontent.com/krisu3453456436365/WaveRPMDT.github.io/main/data/mdt_webhook.json';
 
   async function fetchMdtRecords(ssnQ, nameQ) {
-    const url = new URL('api.php', window.location.href);
-    if (ssnQ) url.searchParams.set('ssn', ssnQ);
-    if (nameQ) url.searchParams.set('name', nameQ);
+    const res = await fetch(DATA_URL, { cache: 'no-store' });
+    if (!res.ok) throw new Error('bad response');
 
-    const res = await fetch(url.toString(), { cache: 'no-store' });
-    if (!res.ok) {
-      throw new Error('bad response');
-    }
-    return await res.json();
+    const data = await res.json();
+    const records = Array.isArray(data) ? data : (Array.isArray(data.records) ? data.records : []);
+    const normalized = records.map((item) => ({
+      name: item.name || 'Nieznane',
+      ssn: item.ssn || 'Brak',
+      dob: item.dob || 'Brak danych',
+      address: item.address || 'Adres nieznany',
+      status: item.status || (item.is_wanted ? 'warrant' : 'clear'),
+      note: item.note || 'Brak danych',
+      vehicles: Array.isArray(item.vehicles) ? item.vehicles : [],
+      penalties: Array.isArray(item.penalties) ? item.penalties : []
+    }));
+
+    if (!ssnQ && !nameQ) return normalized;
+    const qssn = (ssnQ || '').toLowerCase();
+    const qname = (nameQ || '').toLowerCase();
+    return normalized.filter((item) => {
+      const nameMatch = !qname || (item.name || '').toLowerCase().includes(qname);
+      const ssnMatch = !qssn || (item.ssn || '').toLowerCase().includes(qssn);
+      return nameMatch && ssnMatch;
+    });
   }
 
   async function runSearch(){
@@ -395,68 +261,43 @@
 
     box.innerHTML = '<div class="empty">Szukam w bazie…</div>';
 
-    let hits;
     try{
-      hits = await fetchMdtRecords(ssnQ, nameQ);
-    }catch(e){
-      box.innerHTML = '<div class="empty">Nie można połączyć się z serwerem danych. Ustaw poprawny adres InfinityFree w zmiennej API_BASE.</div>';
-      return;
-    }
+      const hits = await fetchMdtRecords(ssnQ, nameQ);
+      if(!hits || hits.length === 0){
+        box.innerHTML = '<div class="empty">Brak rekordów pasujących do zapytania.</div>';
+        return;
+      }
 
-    if(!hits || hits.length === 0){
-      box.innerHTML = '<div class="empty">Brak rekordów pasujących do zapytania.</div>';
-      return;
-    }
-
-    box.innerHTML = hits.map((p, i) => {
-      const vehicles = Array.isArray(p.vehicles) ? p.vehicles.join(', ') : '';
-      const penalties = Array.isArray(p.penalties) ? p.penalties.join(' | ') : '';
-      const extra = [];
-      if (vehicles) extra.push('Pojazdy: ' + vehicles);
-      if (penalties) extra.push('Kary: ' + penalties);
-      const detail = extra.length ? '<div class="meta" style="margin-top:6px;">' + extra.join('<br>') + '</div>' : '';
-
-      return `
-        <div class="record-wrap" style="animation-delay:${i * 0.08}s">
-          <div class="record">
-            <div>
-              <div class="name">${p.name}</div>
-              <div class="meta">
-                SSN: ${p.ssn}<br>
-                Data ur.: ${p.dob}<br>
-                Adres: ${p.address}
+      box.innerHTML = hits.map((p, i) => {
+        const vehicles = Array.isArray(p.vehicles) ? p.vehicles.join(', ') : '';
+        const penalties = Array.isArray(p.penalties) ? p.penalties.join(' | ') : '';
+        const extra = [];
+        if (vehicles) extra.push('Pojazdy: ' + vehicles);
+        if (penalties) extra.push('Kary: ' + penalties);
+        const detail = extra.length ? '<div class="meta" style="margin-top:6px;">' + extra.join('<br>') + '</div>' : '';
+        return `
+          <div class="record-wrap" style="animation-delay:${i * 0.08}s">
+            <div class="record">
+              <div>
+                <div class="name">${p.name}</div>
+                <div class="meta">SSN: ${p.ssn}<br>Data ur.: ${p.dob}<br>Adres: ${p.address}</div>
               </div>
+              <div class="status ${p.status === 'warrant' ? 'warrant' : 'clear'}">${p.status === 'warrant' ? 'NAKAZ AKTYWNY' : 'CZYSTY'}</div>
             </div>
-            <div class="status ${p.status === 'warrant' ? 'warrant' : 'clear'}">
-              ${p.status === 'warrant' ? 'NAKAZ AKTYWNY' : 'CZYSTY'}
-            </div>
+            <div class="meta" style="margin:-4px 0 4px 2px;">${p.note || 'Brak danych'}</div>
+            ${detail}
           </div>
-          <div class="meta" style="margin:-4px 0 4px 2px;">${p.note || 'Brak danych'}</div>
-          ${detail}
-        </div>
-      `;
-    }).join('');
+        `;
+      }).join('');
+    }catch(e){
+      box.innerHTML = '<div class="empty">Nie można połączyć się z danymi strony. Sprawdź link do pliku JSON.</div>';
+    }
   }
 
-  document.querySelectorAll('.tab').forEach(t=>{
-    t.addEventListener('click', ()=>{
-      document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
-      t.classList.add('active');
-      document.querySelectorAll('main .panel').forEach(p=>p.style.display='none');
-      document.getElementById('tab-' + t.dataset.tab).style.display='block';
-    });
-  });
-
-  document.getElementById('badge-pass').addEventListener('keydown', e=>{
-    if(e.key === 'Enter') tryLogin();
-  });
-  document.getElementById('q-name').addEventListener('keydown', e=>{
-    if(e.key === 'Enter') runSearch();
-  });
-  document.getElementById('q-ssn').addEventListener('keydown', e=>{
-    if(e.key === 'Enter') runSearch();
-  });
+  document.querySelectorAll('.tab').forEach(t=>{ t.addEventListener('click', ()=>{ document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); t.classList.add('active'); document.querySelectorAll('main .panel').forEach(p=>p.style.display='none'); document.getElementById('tab-' + t.dataset.tab).style.display='block'; }); });
+  document.getElementById('badge-pass').addEventListener('keydown', e=>{ if(e.key === 'Enter') tryLogin(); });
+  document.getElementById('q-name').addEventListener('keydown', e=>{ if(e.key === 'Enter') runSearch(); });
+  document.getElementById('q-ssn').addEventListener('keydown', e=>{ if(e.key === 'Enter') runSearch(); });
 </script>
 </body>
 </html>
- 
