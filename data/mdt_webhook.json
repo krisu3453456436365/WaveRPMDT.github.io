@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T01:47:45.834435Z",
+  "generated_at": "2026-09-26T01:48:47.190768Z",
   "records": [
     {
       "name": "Chris Davis",
@@ -109,6 +109,24 @@
         "warrant": true,
         "vehicle_count": 0,
         "penalty_count": 1
+      }
+    },
+    {
+      "name": "Ali pomagali",
+      "ssn": "9488",
+      "dob": "25.07.2003",
+      "address": "USA / Los Angeles",
+      "status": "clear",
+      "is_wanted": false,
+      "has_id_card": true,
+      "note": "Dowód osobisty zarejestrowany.",
+      "vehicles": [],
+      "penalties": [],
+      "raw_data": {
+        "id_card": true,
+        "warrant": false,
+        "vehicle_count": 0,
+        "penalty_count": 0
       }
     },
     {
@@ -2363,24 +2381,6 @@
     },
     {
       "name": "1484630868697022535",
-      "ssn": "Brak",
-      "dob": "Brak danych",
-      "address": "Adres nieznany",
-      "status": "clear",
-      "is_wanted": false,
-      "has_id_card": false,
-      "note": "Brak dowodu w bazie.",
-      "vehicles": [],
-      "penalties": [],
-      "raw_data": {
-        "id_card": false,
-        "warrant": false,
-        "vehicle_count": 0,
-        "penalty_count": 0
-      }
-    },
-    {
-      "name": "925829336022515743",
       "ssn": "Brak",
       "dob": "Brak danych",
       "address": "Adres nieznany",
