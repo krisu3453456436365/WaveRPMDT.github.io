@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T22:23:49.432152Z",
+  "generated_at": "2026-09-26T22:24:50.826465Z",
   "records": [
     {
       "name": "Chris Davis",
@@ -133,6 +133,24 @@
       "name": "Samir Abghuajev",
       "ssn": "7013",
       "dob": "15.04.2004",
+      "address": "USA / Los Angeles",
+      "status": "clear",
+      "is_wanted": false,
+      "has_id_card": true,
+      "note": "Dowód osobisty zarejestrowany.",
+      "vehicles": [],
+      "penalties": [],
+      "raw_data": {
+        "id_card": true,
+        "warrant": false,
+        "vehicle_count": 0,
+        "penalty_count": 0
+      }
+    },
+    {
+      "name": "John Smith",
+      "ssn": "9392",
+      "dob": "09.08.1990",
       "address": "USA / Los Angeles",
       "status": "clear",
       "is_wanted": false,
@@ -1643,24 +1661,6 @@
     },
     {
       "name": "1390672641794248765",
-      "ssn": "Brak",
-      "dob": "Brak danych",
-      "address": "Adres nieznany",
-      "status": "clear",
-      "is_wanted": false,
-      "has_id_card": false,
-      "note": "Brak dowodu w bazie.",
-      "vehicles": [],
-      "penalties": [],
-      "raw_data": {
-        "id_card": false,
-        "warrant": false,
-        "vehicle_count": 0,
-        "penalty_count": 0
-      }
-    },
-    {
-      "name": "1217569903838498906",
       "ssn": "Brak",
       "dob": "Brak danych",
       "address": "Adres nieznany",
