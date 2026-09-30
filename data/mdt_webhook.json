@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T20:34:12.183990Z",
+  "generated_at": "2026-09-30T20:35:13.681273Z",
   "records": [
     {
       "name": "Chris Davis",
@@ -151,6 +151,24 @@
       "name": "John Smith",
       "ssn": "9392",
       "dob": "09.08.1990",
+      "address": "USA / Los Angeles",
+      "status": "clear",
+      "is_wanted": false,
+      "has_id_card": true,
+      "note": "Dowód osobisty zarejestrowany.",
+      "vehicles": [],
+      "penalties": [],
+      "raw_data": {
+        "id_card": true,
+        "warrant": false,
+        "vehicle_count": 0,
+        "penalty_count": 0
+      }
+    },
+    {
+      "name": "Anthony Diaz",
+      "ssn": "8850",
+      "dob": "11.11.2000",
       "address": "USA / Los Angeles",
       "status": "clear",
       "is_wanted": false,
@@ -2903,24 +2921,6 @@
     },
     {
       "name": "1238802959643705414",
-      "ssn": "Brak",
-      "dob": "Brak danych",
-      "address": "Adres nieznany",
-      "status": "clear",
-      "is_wanted": false,
-      "has_id_card": false,
-      "note": "Brak dowodu w bazie.",
-      "vehicles": [],
-      "penalties": [],
-      "raw_data": {
-        "id_card": false,
-        "warrant": false,
-        "vehicle_count": 0,
-        "penalty_count": 0
-      }
-    },
-    {
-      "name": "1210358016134610945",
       "ssn": "Brak",
       "dob": "Brak danych",
       "address": "Adres nieznany",
