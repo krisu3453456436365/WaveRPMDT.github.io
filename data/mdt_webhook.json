@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T21:28:28.248066Z",
+  "generated_at": "2026-10-02T21:29:29.810372Z",
   "records": [
     {
       "name": "Chris Davis",
@@ -259,6 +259,24 @@
       "name": "Franklin Brown",
       "ssn": "5949",
       "dob": "05.05.1989",
+      "address": "USA / Los Angeles",
+      "status": "clear",
+      "is_wanted": false,
+      "has_id_card": true,
+      "note": "Dowód osobisty zarejestrowany.",
+      "vehicles": [],
+      "penalties": [],
+      "raw_data": {
+        "id_card": true,
+        "warrant": false,
+        "vehicle_count": 0,
+        "penalty_count": 0
+      }
+    },
+    {
+      "name": "James Smith",
+      "ssn": "2047",
+      "dob": "19.02.1999",
       "address": "USA / Los Angeles",
       "status": "clear",
       "is_wanted": false,
@@ -3047,24 +3065,6 @@
     },
     {
       "name": "874297765323214849",
-      "ssn": "Brak",
-      "dob": "Brak danych",
-      "address": "Adres nieznany",
-      "status": "clear",
-      "is_wanted": false,
-      "has_id_card": false,
-      "note": "Brak dowodu w bazie.",
-      "vehicles": [],
-      "penalties": [],
-      "raw_data": {
-        "id_card": false,
-        "warrant": false,
-        "vehicle_count": 0,
-        "penalty_count": 0
-      }
-    },
-    {
-      "name": "1376957348886872067",
       "ssn": "Brak",
       "dob": "Brak danych",
       "address": "Adres nieznany",
