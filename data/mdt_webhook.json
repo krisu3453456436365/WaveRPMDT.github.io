@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T18:22:19.525614Z",
+  "generated_at": "2026-10-02T18:23:21.206623Z",
   "records": [
     {
       "name": "Chris Davis",
@@ -169,6 +169,24 @@
       "name": "Anthony Diaz",
       "ssn": "8850",
       "dob": "11.11.2000",
+      "address": "USA / Los Angeles",
+      "status": "clear",
+      "is_wanted": false,
+      "has_id_card": true,
+      "note": "Dowód osobisty zarejestrowany.",
+      "vehicles": [],
+      "penalties": [],
+      "raw_data": {
+        "id_card": true,
+        "warrant": false,
+        "vehicle_count": 0,
+        "penalty_count": 0
+      }
+    },
+    {
+      "name": "Waclaw Fish",
+      "ssn": "4184",
+      "dob": "06.07.2000",
       "address": "USA / Los Angeles",
       "status": "clear",
       "is_wanted": false,
@@ -2579,24 +2597,6 @@
     },
     {
       "name": "1406357123402698782",
-      "ssn": "Brak",
-      "dob": "Brak danych",
-      "address": "Adres nieznany",
-      "status": "clear",
-      "is_wanted": false,
-      "has_id_card": false,
-      "note": "Brak dowodu w bazie.",
-      "vehicles": [],
-      "penalties": [],
-      "raw_data": {
-        "id_card": false,
-        "warrant": false,
-        "vehicle_count": 0,
-        "penalty_count": 0
-      }
-    },
-    {
-      "name": "801352116459405312",
       "ssn": "Brak",
       "dob": "Brak danych",
       "address": "Adres nieznany",
