@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T19:38:25.662991Z",
+  "generated_at": "2026-10-02T19:39:27.277958Z",
   "records": [
     {
       "name": "Chris Davis",
@@ -223,6 +223,24 @@
       "name": "Jordan Giewicki",
       "ssn": "4602",
       "dob": "24.05.1999",
+      "address": "USA / Los Angeles",
+      "status": "clear",
+      "is_wanted": false,
+      "has_id_card": true,
+      "note": "Dowód osobisty zarejestrowany.",
+      "vehicles": [],
+      "penalties": [],
+      "raw_data": {
+        "id_card": true,
+        "warrant": false,
+        "vehicle_count": 0,
+        "penalty_count": 0
+      }
+    },
+    {
+      "name": "Christopher Bradfort",
+      "ssn": "2966",
+      "dob": "18.7.1989",
       "address": "USA / Los Angeles",
       "status": "clear",
       "is_wanted": false,
@@ -3011,24 +3029,6 @@
     },
     {
       "name": "874297765323214849",
-      "ssn": "Brak",
-      "dob": "Brak danych",
-      "address": "Adres nieznany",
-      "status": "clear",
-      "is_wanted": false,
-      "has_id_card": false,
-      "note": "Brak dowodu w bazie.",
-      "vehicles": [],
-      "penalties": [],
-      "raw_data": {
-        "id_card": false,
-        "warrant": false,
-        "vehicle_count": 0,
-        "penalty_count": 0
-      }
-    },
-    {
-      "name": "1485290786152255599",
       "ssn": "Brak",
       "dob": "Brak danych",
       "address": "Adres nieznany",
