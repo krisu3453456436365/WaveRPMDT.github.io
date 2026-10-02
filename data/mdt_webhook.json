@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T18:25:25.001612Z",
+  "generated_at": "2026-10-02T18:26:26.770384Z",
   "records": [
     {
       "name": "Chris Davis",
@@ -205,6 +205,24 @@
       "name": "Yuri Takahashi",
       "ssn": "6577",
       "dob": "19.03.1993",
+      "address": "USA / Los Angeles",
+      "status": "clear",
+      "is_wanted": false,
+      "has_id_card": true,
+      "note": "Dowód osobisty zarejestrowany.",
+      "vehicles": [],
+      "penalties": [],
+      "raw_data": {
+        "id_card": true,
+        "warrant": false,
+        "vehicle_count": 0,
+        "penalty_count": 0
+      }
+    },
+    {
+      "name": "Jordan Giewicki",
+      "ssn": "4602",
+      "dob": "24.05.1999",
       "address": "USA / Los Angeles",
       "status": "clear",
       "is_wanted": false,
@@ -3029,24 +3047,6 @@
     },
     {
       "name": "1376957348886872067",
-      "ssn": "Brak",
-      "dob": "Brak danych",
-      "address": "Adres nieznany",
-      "status": "clear",
-      "is_wanted": false,
-      "has_id_card": false,
-      "note": "Brak dowodu w bazie.",
-      "vehicles": [],
-      "penalties": [],
-      "raw_data": {
-        "id_card": false,
-        "warrant": false,
-        "vehicle_count": 0,
-        "penalty_count": 0
-      }
-    },
-    {
-      "name": "835444801670217778",
       "ssn": "Brak",
       "dob": "Brak danych",
       "address": "Adres nieznany",
