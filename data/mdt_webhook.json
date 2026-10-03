@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T23:00:51.158759Z",
+  "generated_at": "2026-10-03T23:01:52.823872Z",
   "records": [
     {
       "name": "Chris Davis",
@@ -3317,6 +3317,24 @@
     },
     {
       "name": "1462547123407945940",
+      "ssn": "Brak",
+      "dob": "Brak danych",
+      "address": "Adres nieznany",
+      "status": "clear",
+      "is_wanted": false,
+      "has_id_card": false,
+      "note": "Brak dowodu w bazie.",
+      "vehicles": [],
+      "penalties": [],
+      "raw_data": {
+        "id_card": false,
+        "warrant": false,
+        "vehicle_count": 0,
+        "penalty_count": 0
+      }
+    },
+    {
+      "name": "936255340306108486",
       "ssn": "Brak",
       "dob": "Brak danych",
       "address": "Adres nieznany",
