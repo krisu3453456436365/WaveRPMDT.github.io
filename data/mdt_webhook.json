@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T08:46:48.261776Z",
+  "generated_at": "2026-10-03T08:47:49.602274Z",
   "records": [
     {
       "name": "Chris Davis",
@@ -292,6 +292,24 @@
       }
     },
     {
+      "name": "Tony White",
+      "ssn": "6406",
+      "dob": "22.01.2000",
+      "address": "USA / Los Angeles",
+      "status": "clear",
+      "is_wanted": false,
+      "has_id_card": true,
+      "note": "Dowód osobisty zarejestrowany.",
+      "vehicles": [],
+      "penalties": [],
+      "raw_data": {
+        "id_card": true,
+        "warrant": false,
+        "vehicle_count": 0,
+        "penalty_count": 0
+      }
+    },
+    {
       "name": "1463831425815023689",
       "ssn": "Brak",
       "dob": "Brak danych",
@@ -527,24 +545,6 @@
     },
     {
       "name": "1339992209986031718",
-      "ssn": "Brak",
-      "dob": "Brak danych",
-      "address": "Adres nieznany",
-      "status": "clear",
-      "is_wanted": false,
-      "has_id_card": false,
-      "note": "Brak dowodu w bazie.",
-      "vehicles": [],
-      "penalties": [],
-      "raw_data": {
-        "id_card": false,
-        "warrant": false,
-        "vehicle_count": 0,
-        "penalty_count": 0
-      }
-    },
-    {
-      "name": "1025826279594930196",
       "ssn": "Brak",
       "dob": "Brak danych",
       "address": "Adres nieznany",
