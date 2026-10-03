@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T13:44:16.260531Z",
+  "generated_at": "2026-10-03T13:45:17.557705Z",
   "records": [
     {
       "name": "Chris Davis",
@@ -313,6 +313,24 @@
       "name": "Alexander Anderson",
       "ssn": "3838",
       "dob": "22.07.2000",
+      "address": "USA / Los Angeles",
+      "status": "clear",
+      "is_wanted": false,
+      "has_id_card": true,
+      "note": "Dowód osobisty zarejestrowany.",
+      "vehicles": [],
+      "penalties": [],
+      "raw_data": {
+        "id_card": true,
+        "warrant": false,
+        "vehicle_count": 0,
+        "penalty_count": 0
+      }
+    },
+    {
+      "name": "Chriss Everton",
+      "ssn": "9639",
+      "dob": "13.11.1993",
       "address": "USA / Los Angeles",
       "status": "clear",
       "is_wanted": false,
@@ -2417,24 +2435,6 @@
     },
     {
       "name": "1428348977371156503",
-      "ssn": "Brak",
-      "dob": "Brak danych",
-      "address": "Adres nieznany",
-      "status": "clear",
-      "is_wanted": false,
-      "has_id_card": false,
-      "note": "Brak dowodu w bazie.",
-      "vehicles": [],
-      "penalties": [],
-      "raw_data": {
-        "id_card": false,
-        "warrant": false,
-        "vehicle_count": 0,
-        "penalty_count": 0
-      }
-    },
-    {
-      "name": "1373754881847853136",
       "ssn": "Brak",
       "dob": "Brak danych",
       "address": "Adres nieznany",
