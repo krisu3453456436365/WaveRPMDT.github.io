@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T12:16:43.673871Z",
+  "generated_at": "2026-10-04T12:17:45.261625Z",
   "records": [
     {
       "name": "Chris Davis",
@@ -385,6 +385,24 @@
       "name": "Mariusz Manewski",
       "ssn": "5258",
       "dob": "17.08.1989",
+      "address": "USA / Los Angeles",
+      "status": "clear",
+      "is_wanted": false,
+      "has_id_card": true,
+      "note": "Dowód osobisty zarejestrowany.",
+      "vehicles": [],
+      "penalties": [],
+      "raw_data": {
+        "id_card": true,
+        "warrant": false,
+        "vehicle_count": 0,
+        "penalty_count": 0
+      }
+    },
+    {
+      "name": "John Stayler",
+      "ssn": "7383",
+      "dob": "12.08.1998",
       "address": "USA / Los Angeles",
       "status": "clear",
       "is_wanted": false,
@@ -3119,24 +3137,6 @@
     },
     {
       "name": "1210182814952198145",
-      "ssn": "Brak",
-      "dob": "Brak danych",
-      "address": "Adres nieznany",
-      "status": "clear",
-      "is_wanted": false,
-      "has_id_card": false,
-      "note": "Brak dowodu w bazie.",
-      "vehicles": [],
-      "penalties": [],
-      "raw_data": {
-        "id_card": false,
-        "warrant": false,
-        "vehicle_count": 0,
-        "penalty_count": 0
-      }
-    },
-    {
-      "name": "1461422505473347709",
       "ssn": "Brak",
       "dob": "Brak danych",
       "address": "Adres nieznany",
