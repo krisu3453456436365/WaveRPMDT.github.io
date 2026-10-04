@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T12:55:45.363856Z",
+  "generated_at": "2026-10-04T12:56:47.016823Z",
   "records": [
     {
       "name": "Chris Davis",
@@ -403,6 +403,24 @@
       "name": "John Stayler",
       "ssn": "7383",
       "dob": "12.08.1998",
+      "address": "USA / Los Angeles",
+      "status": "clear",
+      "is_wanted": false,
+      "has_id_card": true,
+      "note": "Dowód osobisty zarejestrowany.",
+      "vehicles": [],
+      "penalties": [],
+      "raw_data": {
+        "id_card": true,
+        "warrant": false,
+        "vehicle_count": 0,
+        "penalty_count": 0
+      }
+    },
+    {
+      "name": "Rosalie Davis",
+      "ssn": "7807",
+      "dob": "03.02.2006",
       "address": "USA / Los Angeles",
       "status": "clear",
       "is_wanted": false,
@@ -833,24 +851,6 @@
     },
     {
       "name": "1010618772522016878",
-      "ssn": "Brak",
-      "dob": "Brak danych",
-      "address": "Adres nieznany",
-      "status": "clear",
-      "is_wanted": false,
-      "has_id_card": false,
-      "note": "Brak dowodu w bazie.",
-      "vehicles": [],
-      "penalties": [],
-      "raw_data": {
-        "id_card": false,
-        "warrant": false,
-        "vehicle_count": 0,
-        "penalty_count": 0
-      }
-    },
-    {
-      "name": "1302991874021261387",
       "ssn": "Brak",
       "dob": "Brak danych",
       "address": "Adres nieznany",
