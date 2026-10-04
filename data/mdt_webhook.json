@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T10:26:00.612770Z",
+  "generated_at": "2026-10-04T10:27:02.100348Z",
   "records": [
     {
       "name": "Chris Davis",
@@ -349,6 +349,24 @@
       "name": "Jan Kowalczyk",
       "ssn": "5134",
       "dob": "01.01.2000",
+      "address": "USA / Los Angeles",
+      "status": "clear",
+      "is_wanted": false,
+      "has_id_card": true,
+      "note": "Dowód osobisty zarejestrowany.",
+      "vehicles": [],
+      "penalties": [],
+      "raw_data": {
+        "id_card": true,
+        "warrant": false,
+        "vehicle_count": 0,
+        "penalty_count": 0
+      }
+    },
+    {
+      "name": "Erwin Rommel",
+      "ssn": "2725",
+      "dob": "14.02.2001",
       "address": "USA / Los Angeles",
       "status": "clear",
       "is_wanted": false,
@@ -3065,24 +3083,6 @@
     },
     {
       "name": "1064293599996563456",
-      "ssn": "Brak",
-      "dob": "Brak danych",
-      "address": "Adres nieznany",
-      "status": "clear",
-      "is_wanted": false,
-      "has_id_card": false,
-      "note": "Brak dowodu w bazie.",
-      "vehicles": [],
-      "penalties": [],
-      "raw_data": {
-        "id_card": false,
-        "warrant": false,
-        "vehicle_count": 0,
-        "penalty_count": 0
-      }
-    },
-    {
-      "name": "874297765323214849",
       "ssn": "Brak",
       "dob": "Brak danych",
       "address": "Adres nieznany",
